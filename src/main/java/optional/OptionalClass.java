@@ -1,14 +1,17 @@
 package optional;
 
+import employeeData.Employee;
+
 import java.util.Optional;
 
 public class OptionalClass {
     public static void main(String[] args) {
-        String[] strings = new String[10];
-        Optional<String> string = Optional.ofNullable(strings[5]);
-        if (string.isPresent()){
-            
-        }
+        Employee employee = new Employee("Jaswanth", 123.25);
+        Optional<String> name = Optional.ofNullable(employee.getName());
+        System.out.println("Value of the name is +  " + name);
 
     }
+
+
 }
+
